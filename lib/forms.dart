@@ -18,7 +18,7 @@ class _myFormState extends State<myForm> {
               print('form submitted');
             }
       },
-      child: const Text("Forms"),
+      child: const Text("submit"),
       ),
       body: Form(
         key: _formKey,
@@ -34,6 +34,22 @@ class _myFormState extends State<myForm> {
                   if(submittedValue!.isEmpty || submittedValue == null){
 
                     return ' Email cannot be empty ';
+                  }
+                  return null;
+                } ,              
+            ),
+             TextFormField(),
+              TextFormField(),
+             TextFormField(
+              decoration: const InputDecoration(
+                labelText: 'username',
+              ), 
+                onChanged: (String newValue){
+                  },
+                validator: (String? submittedValue){
+                  if(submittedValue!.isEmpty || submittedValue == null){
+
+                    return ' username cannot be empty ';
                   }
                   return null;
                 } ,              
